@@ -1,85 +1,36 @@
-var buttonMainMenu1Nothing;
-var buttonMainMenu1HoverOver;
-var buttonMainMenu1Click;
-var buttonMainMenu2Nothing;
-var buttonMainMenu2HoverOver;
-var buttonMainMenu2Click;
+var imageMainMenuEasy;
+var imageMainMenu;
 
 
-var buttonMainMenu1X;
-var buttonMainMenu1Y;
-var buttonMainMenu2X;
-var buttonMainMenu2Y;
+var buttonMainMenuEasyX;
+var buttonMainMenuEasyY;
 
 
 function preloadMainMenu()
 {
-	/*
-	buttonMainMenu1Click = loadImage('https://bleungwpg.github.io/p5jsTutorial3.1/buttonClick.png');
-	buttonMainMenu1HoverOver = loadImage('https://bleungwpg.github.io/p5jsTutorial3.1/buttonHoverOver.png');
-  	buttonMainMenu1Nothing = loadImage('https://bleungwpg.github.io/p5jsTutorial3.1/buttonNothing.png');
-
-	buttonMainMenu2Click = loadImage('https://bleungwpg.github.io/p5jsTutorial3.1/buttonClick.png');
-	buttonMainMenu2HoverOver = loadImage('https://bleungwpg.github.io/p5jsTutorial3.1/buttonHoverOver.png');
-  	buttonMainMenu2Nothing = loadImage('https://bleungwpg.github.io/p5jsTutorial3.1/buttonNothing.png');
-*/
+	imageMainMenuEasy = loadImage('https://bleungwpg.github.io/p5jsTutorial3.2/images/buttonEasy.png');
+	imageMainMenu = loadImage('https://bleungwpg.github.io/p5jsTutorial3.2/images/titleMainMenu.png');	
 }
 
 function setupMainMenu()
 {
 	
-	buttonMainMenu1X = 200;
-	buttonMainMenu1Y = 110;
-	buttonMainMenu2X = 200;
-	buttonMainMenu2Y = 210;
+	buttonMainMenuEasyX = 200;
+	buttonMainMenuEasyY = 110;
 
 }
 
 function drawMainMenu()
 {
-	background(125,125,125)
+	background(255,125,0)
 
-	if (mouseX > buttonMainMenu1X && mouseX < buttonMainMenu1X + 200 && mouseY > buttonMainMenu1Y && mouseY < buttonMainMenu1Y+50)
+	image(imageMainMenu,400,10);
+
+	image(imageMainMenuEasy,buttonMainMenuEasyX,buttonMainMenuEasyY);
+
+	if (mouseX > buttonMainMenuEasyX && mouseX < buttonMainMenuEasyX + 200 && mouseY > buttonMainMenuEasyY && mouseY < buttonMainMenuEasyY+50 && mouseIsPressed)
 	{
-		fill(255,0,0);
-		rect(buttonMainMenu1X,buttonMainMenu1Y,200,50);
-		if (mouseIsPressed)
-		{
-			fill(255,255,0);
-			rect(buttonMainMenu1X,buttonMainMenu1Y,200,50);
-		}
+		canvasID = -2;
 	}
-	else
-	{
-		fill(0,255,125);
-		rect(buttonMainMenu1X,buttonMainMenu1Y,200,50);
-	}
-
-	fill(0,0,0);
-	text("Easy",buttonMainMenu1X+50,buttonMainMenu1Y+30);
-
-
-
-
-	if (mouseX > buttonMainMenu2X && mouseX < buttonMainMenu2X + 200 && mouseY > buttonMainMenu2Y && mouseY < buttonMainMenu2Y+50)
-	{
-		fill(0,0,255);
-		rect(buttonMainMenu2X,buttonMainMenu2Y,200,50);
-		if (mouseIsPressed)
-		{
-			fill(0,255,255);
-			rect(buttonMainMenu2X,buttonMainMenu2Y,200,50);
-		}
-	}
-	else
-	{
-		fill(125,255,0);
-		rect(buttonMainMenu2X,buttonMainMenu2Y,200,50);
-	}
-
-	fill(0,0,0);
-	text("Hard",buttonMainMenu2X+50,buttonMainMenu2Y+30);
-
-
 
 }

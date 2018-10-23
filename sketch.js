@@ -1,17 +1,17 @@
-// part 1
-// imagine you have the power of god in a programming world
-// you create a variable (think container) out of thin air
-
+/*
+  canvasID - 0 - intro
+  canvasID - 1 - main menu
+  canvasID - 2 - easy
+*/
 
 var canvasID;
 
 function preload()
 {
-	// part 2
-	// now that you have created a variable it is time to put some 
-	// data into the variable, the code below does that
+
 	preloadIntro();
 	preloadMainMenu();
+	preloadEasy();
 
 }
 
@@ -19,7 +19,9 @@ function setup()
 {
 	createCanvas(800,600);
 
+	setupIntro();
 	setupMainMenu();
+	setupEasy();
 
 	canvasID = 0;
 }
@@ -38,5 +40,21 @@ function draw()
 	{
 		drawMainMenu();
 	}
+	if (canvasID == 2)
+	{
+		drawEasy();
+	}
 
+}
+
+function mouseReleased()
+{
+	if (canvasID == -1)
+	{
+		canvasID = 1;
+	}
+	if (canvasID == -2)
+	{
+		canvasID = 2;
+	}
 }
