@@ -1,8 +1,8 @@
-var imageIntroImage;
+var imageIntroTitle;
 
 function preloadIntro()
 {
-	imageIntroImage = loadImage('https://bleungwpg.github.io/p5jsTutorial3.2/images/buttonIntro.png');	
+	imageIntroTitle = loadImage('https://bleungwpg.github.io/p5jsTutorial3.2/images/titleIntro.png');	
 }
 
 function setupIntro()
@@ -14,7 +14,7 @@ function drawIntro()
 {
 	background(125,125,125)
 
-	image(imageIntroImage,10,50);
+	image(imageIntroTitle,400,50);
 
 	if (mouseIsPressed)
 	{

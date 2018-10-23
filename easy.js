@@ -1,4 +1,5 @@
 var imageEasyBack;
+var imageEasyTitle;
 
 
 var buttonEasyBackX;
@@ -8,6 +9,8 @@ var buttonEasyBackY;
 function preloadEasy()
 {
 	imageEasyBack = loadImage('https://bleungwpg.github.io/p5jsTutorial3.2/images/buttonBack.png');	
+	imageEasyTitle = loadImage('https://bleungwpg.github.io/p5jsTutorial3.2/images/buttonBack.png');	
+
 }
 
 function setupEasy()
@@ -20,6 +23,8 @@ function setupEasy()
 function drawEasy()
 {
 	background(0,125,255);
+
+	image(imageEasyTitle,400,50);
 
 	image(imageEasyBack,buttonEasyBackX,buttonEasyBackY);
 

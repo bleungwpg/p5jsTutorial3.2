@@ -1,5 +1,5 @@
-var imageMainMenuEasy;
-var imageMainMenu;
+var buttonMainMenuEasy;
+var imageMainMenuTitle;
 
 
 var buttonMainMenuEasyX;
@@ -8,8 +8,8 @@ var buttonMainMenuEasyY;
 
 function preloadMainMenu()
 {
-	imageMainMenuEasy = loadImage('https://bleungwpg.github.io/p5jsTutorial3.2/images/buttonEasy.png');
-	imageMainMenu = loadImage('https://bleungwpg.github.io/p5jsTutorial3.2/images/titleMainMenu.png');	
+	buttonMainMenuEasy = loadImage('https://bleungwpg.github.io/p5jsTutorial3.2/images/buttonEasy.png');
+	imageMainMenuTitle = loadImage('https://bleungwpg.github.io/p5jsTutorial3.2/images/titleMainMenu.png');	
 }
 
 function setupMainMenu()
@@ -24,9 +24,9 @@ function drawMainMenu()
 {
 	background(255,125,0)
 
-	image(imageMainMenu,400,10);
+	image(imageMainMenuTitle,400,10);
 
-	image(imageMainMenuEasy,buttonMainMenuEasyX,buttonMainMenuEasyY);
+	image(buttonMainMenuEasy,buttonMainMenuEasyX,buttonMainMenuEasyY);
 
 	if (mouseX > buttonMainMenuEasyX && mouseX < buttonMainMenuEasyX + 200 && mouseY > buttonMainMenuEasyY && mouseY < buttonMainMenuEasyY+50 && mouseIsPressed)
 	{
