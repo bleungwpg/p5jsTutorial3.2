@@ -9,14 +9,14 @@ var buttonEasyBackY;
 function preloadEasy()
 {
 	imageEasyBack = loadImage('https://bleungwpg.github.io/p5jsTutorial3.2/images/buttonBack.png');	
-	imageEasyTitle = loadImage('https://bleungwpg.github.io/p5jsTutorial3.2/images/buttonBack.png');	
+	imageEasyTitle = loadImage('https://bleungwpg.github.io/p5jsTutorial3.2/images/titleEasyGame.png');	
 
 }
 
 function setupEasy()
 {
-	buttonEasyBackX = 10;
-	buttonEasyBackY = 50;
+	buttonEasyBackX = 200;
+	buttonEasyBackY = 110;
 
 }
 
